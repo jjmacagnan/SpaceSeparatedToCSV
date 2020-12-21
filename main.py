@@ -16,13 +16,14 @@ for filename in files:
     if filename.endswith('.csv'):
         filename = filename[:-4]
 
-    output_file = open(txt_path + "/" + filename + '.txt', 'w')
-    # input_file.readline() # skip first line
-    for line in input_file:
-        output_file.write(" ".join(line.split()).replace(',', ' ') + '\n')
-    input_file.close()
-    output_file.close()
+        output_file = open(txt_path + "/" + filename + '.txt', 'w')
+        # input_file.readline() # skip first line
+        for line in input_file:
+            output_file.write(" ".join(line.split()).replace(',', ' ') + '\n')
 
+        output_file.close()
+
+    input_file.close()
 
 # converts single spaces with a comma
 
@@ -43,9 +44,3 @@ for filename in files:
 #         output_file.write(" ".join(line.split()).replace(' ', ',') + '\n')
 #     input_file.close()
 #     output_file.close()
-
-
-
-
-
-
